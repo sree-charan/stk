@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+node_modules/
+.coverage
+*.egg-info/
+dist/
+build/
+camry-run.log
+.pytest_cache/
+backend/data/storage/
+.kiro/
+CAMRY_PROMPT.md
+frontend/build/

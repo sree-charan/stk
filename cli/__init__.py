@@ -1,0 +1,1 @@
+"""Stock Chat Assistant CLI."""

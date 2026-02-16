@@ -1,0 +1,33 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e2e8f0; }
+.app { display: flex; flex-direction: column; height: 100vh; max-width: 800px; margin: 0 auto; padding: 1rem; }
+.header { text-align: center; padding: 1rem; border-bottom: 1px solid #334155; }
+.header h1 { font-size: 1.5rem; color: #38bdf8; }
+.chat-container { flex: 1; overflow-y: auto; padding: 1rem 0; }
+.message { margin: 0.5rem 0; padding: 0.75rem 1rem; border-radius: 0.5rem; max-width: 85%; }
+.message.user { background: #1e40af; margin-left: auto; }
+.message.assistant { background: #334155; }
+.message.error { background: #7f1d1d; }
+.prediction-card { background: #1e293b; border: 1px solid #334155; border-radius: 0.5rem; padding: 1rem; margin: 0.5rem 0; }
+.prediction-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+.prediction-header h3 { color: #38bdf8; }
+.prediction-header .price { color: #e2e8f0; font-size: 1.1rem; font-weight: 600; }
+.prediction-header .verdict { font-weight: 600; }
+.prediction-row { display: flex; justify-content: space-between; align-items: center; padding: 0.35rem 0; border-bottom: 1px solid #1e293b; }
+.horizon-label { color: #94a3b8; min-width: 80px; }
+.direction { font-weight: 500; }
+.return { font-family: monospace; }
+.signals { font-size: 0.85rem; padding: 0.35rem 0; }
+.signals.bullish { color: #22c55e; }
+.signals.bearish { color: #ef4444; }
+.data-freshness { font-size: 0.75rem; color: #64748b; margin-top: 0.5rem; text-align: right; }
+.bullish, .buy { color: #22c55e; }
+.bearish, .sell { color: #ef4444; }
+.neutral, .hold { color: #eab308; }
+.input-container { display: flex; gap: 0.5rem; padding: 1rem 0; border-top: 1px solid #334155; }
+.input-container input { flex: 1; padding: 0.75rem; border: 1px solid #475569; border-radius: 0.5rem; background: #1e293b; color: #e2e8f0; font-size: 1rem; }
+.input-container input:focus { outline: none; border-color: #38bdf8; }
+.input-container button { padding: 0.75rem 1.5rem; background: #2563eb; color: white; border: none; border-radius: 0.5rem; cursor: pointer; font-size: 1rem; }
+.input-container button:hover { background: #1d4ed8; }
+.input-container button:disabled { background: #475569; cursor: not-allowed; }
+.status { text-align: center; color: #94a3b8; font-size: 0.875rem; padding: 0.5rem; }

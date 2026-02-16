@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stock-chat"
+version = "1.2.3"
+requires-python = ">=3.10"
+description = "ML-powered stock analysis with real market data, FastAPI backend, React frontend, and CLI"
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scipy>=1.10.0",
+    "xgboost>=2.0.0",
+    "torch>=2.0.0",
+    "scikit-learn>=1.3.0",
+    "lightgbm>=4.0.0",
+    "optuna>=3.0.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "websockets>=11.0",
+    "pydantic>=2.0.0",
+    "yfinance>=0.2.0",
+    "fredapi>=0.5.0",
+    "newsapi-python>=0.2.7",
+    "requests>=2.31.0",
+    "vaderSentiment>=3.3.2",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+stk = "cli.main:main"
+
+[tool.setuptools.packages.find]
+include = ["cli*", "backend*"]
+
+[tool.setuptools.package-data]
+cli = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+ignore = ["E701", "E702", "E731", "E741", "E402"]
